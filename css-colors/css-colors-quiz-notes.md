@@ -5,6 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - Name three different types of values you can use to specify colors in CSS.
+  Named color value (blue, red, etc), hexidecimal values, and rgba values.
 
 ## Notes
 
