@@ -1,0 +1,91 @@
+body {
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  color: rgb(93, 93, 93);
+  line-height: 2;
+}
+
+section {
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.container-md {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  column-gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.flex-row {
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.col-1 {
+  flex-basis: 100%;
+}
+
+.col-1-2 {
+  flex-basis: 50%;
+}
+
+.col-1-4 {
+  flex-basis: 25%;
+}
+
+.col-3-4 {
+  flex-basis: 75%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.icon-img {
+  width: 100%;
+  margin-top: -1em;
+}
+
+.button-outline {
+  border: 2px solid rgb(209, 76, 69);
+  color: rgb(209, 76, 69);
+  background-color: rgb(255, 255, 255);
+  padding: 0.625rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.button-outline:hover {
+  cursor: pointer;
+  background-color: rgb(209, 76, 69);
+  color: rgb(255, 255, 255);
+}
