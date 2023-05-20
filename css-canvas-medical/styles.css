@@ -25,15 +25,6 @@ section {
   padding: 3rem 4rem;
 }
 
-.light-grey-bg {
-  background-color: var(--light-grey);
-}
-
-.dark-bg {
-  background-color: var(--dark-grey);
-  color: var(--white);
-}
-
 button {
   background-color: var(--brand-blue);
   color: var(--white);
@@ -62,6 +53,20 @@ p {
 
 a {
   color: var(--mid-grey);
+  text-decoration: none;
+}
+
+.light-grey-bg {
+  background-color: var(--light-grey);
+}
+
+.dark-bg {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+.dark-bg a {
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -102,11 +107,7 @@ nav > section {
   margin-left: -1rem;
 }
 
-/* Footer classes */
-.dark-bg a {
-  color: var(--white);
-  text-decoration: none;
-}
+/* End Navigation classes */
 
 .hero-block {
   position: relative;
