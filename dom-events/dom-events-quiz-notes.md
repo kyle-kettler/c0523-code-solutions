@@ -14,15 +14,16 @@ After completing this exercise, you should be able to discuss or answer the foll
   No they are not.
 
 - What method of element objects lets you set up a function to be called when a specific type of event occurs?
+  The addEventListener
 
 - What is a callback function?
   A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
 - What object is passed into an event listener callback when the event fires?
-  The object the event listener was added too.
+  The event object.
 
 - What is the `event.target`? If you weren't sure, how would you check? Where could you get more information about it?
-  a reference to the object onto which the event was dispatched. Use console.log or console.dir on the event.target
+  a reference to the object onto which the event was dispatched. Console.log the event.target
 
 - What is the difference between these two snippets of code?
   ```js
@@ -31,7 +32,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   ```js
   element.addEventListener('click', handleClick());
   ```
-  The first is passing a variable as the second argument, and the second is passing a funciton.
+  The first will function properly and the funciton will fire with the event listener, the second tries to call the function right away.
 
 ## Notes
 
