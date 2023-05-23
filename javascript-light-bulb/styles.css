@@ -22,10 +22,6 @@ body {
   box-shadow: 0 0 2rem -2px rgb(255, 231, 53);
 }
 
-.container .light-bulb {
-  background-color: rgb(253, 230, 59);
-}
-
 .container.dark {
   background-color: rgb(31, 31, 31);
 }
