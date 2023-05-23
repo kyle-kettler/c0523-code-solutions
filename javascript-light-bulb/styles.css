@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: antiquewhite;
+}
+
+.light-bulb {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  box-shadow: 0 0 2rem -2px rgb(255, 231, 53);
+}
+
+.container .light-bulb {
+  background-color: rgb(253, 230, 59);
+}
+
+.container.dark {
+  background-color: rgb(31, 31, 31);
+}
+
+.container.dark .light-bulb {
+  background-color: rgb(47, 47, 47);
+  box-shadow: 0 0 2rem -2px rgb(0, 0, 0);
+}
