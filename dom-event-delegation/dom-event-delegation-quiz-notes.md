@@ -5,16 +5,22 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is the `event.target`?
+  The read-only target property of the Event interface is a reference to the object onto which the event was dispatched.
 
 - Why is it possible to listen for events on one element that actually happen its descendent elements?
+  Because of event bubbling and capturing.
 
 - What DOM element property tells you what type of element it is?
+  The `tagName` property
 
 - What does the `element.closest()` method take as its argument and what does it return?
+  A valid CSS selector and it returns the closes ancestor element or itself. Is there is no such element it returns null.
 
 - How can you remove an element from the DOM?
+  With the remove() method.
 
 - If you wanted to insert new clickable DOM elements into the page using JavaScript, how could you avoid adding an event listener to every new element individually?
+  Add the event listener to the parent element of the clickable element.
 
 ## Notes
 
