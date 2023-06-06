@@ -1,0 +1,79 @@
+#next,
+#prev {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.carousel-wrap {
+  border: 0.25rem solid black;
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-img-wrap {
+  width: 50%;
+}
+
+.carousel-img {
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2.5rem;
+}
+
+.arrow.left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.arrow.right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  column-gap: 0.5rem;
+}
+
+.pagination-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 100%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: black;
+}
