@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   A service or resource provider
 
 - Which HTTP method does a browser issue to a web server when you visit a URL?
-  Requestr
+  The GET method
 
 - What three things are on the start-line of an HTTP **request** message?
   An HTTP method, the request target, the http version.
