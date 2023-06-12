@@ -42,6 +42,7 @@ function prevSlide() {
 }
 
 $carousel.addEventListener('click', (event) => {
+  console.log(event.targe);
   if (event.target === $nextArrow) {
     nextSlide();
     clearInterval(carouselTimer);
@@ -51,7 +52,7 @@ $carousel.addEventListener('click', (event) => {
     clearInterval(carouselTimer);
     setInterval(nextSlide, 3000);
   } else if (event.target === $paginationDots) {
-    console.log($paginationDots.indexOf());
+    console.log(event.target);
   }
 });
 
