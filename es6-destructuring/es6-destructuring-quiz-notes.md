@@ -14,7 +14,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   declare a variable, instead of a name, use array literal notation and enter a variable name for each item in the array and set the array equal to the array you are destructuring.
 
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
-  Objects use {} and Arrays use []
+  The brackets ({}/[]) are on the left side of the assignment operator.
 
 ## Notes
 
