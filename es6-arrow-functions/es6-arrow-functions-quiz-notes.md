@@ -8,7 +8,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   (...args) => expression; or (...args) => { statements }
 
 - When an arrow function's body is not surrounded in curly braces (_concise body syntax_), what changes in its functionality?
-  You can only use one expression in the function body.
+  You can only use one expression in the function body. And it does not need a return statement because it has an implicent return.
 
 - When using _concise body syntax_, how do you return an object literal?
   Wrap the object in parathese
@@ -47,17 +47,17 @@ After completing this exercise, you should be able to discuss or answer the foll
 
   - Identify the arrow function
 
-  ````js
-    (y) => {
+  ```js
+  (y) => {
     console.log(`4y = ${4 * y}`);
-    }
-    ```
+  };
+  ```
 
   - How many arguments does the arrow function take?
     1
 
   - What value does it return?
-    It doesn't return anything, but it logs `4y = ${4 * y}` to the console
+    It returns undefined.
 
   - How many arguments are passed to the function `bar`?
     1
@@ -68,7 +68,9 @@ After completing this exercise, you should be able to discuss or answer the foll
   - When does the arrow function's code get executed?
     When the bar() function gets called.
 
-  ````
+  ```
+
+  ```
 
 - How does the value of `this` differ between standard functions and arrow functions?
   Arrow functions do not have their own `this` value.
