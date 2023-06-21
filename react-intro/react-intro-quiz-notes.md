@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   A component is a piece of the UI (user interface) that has its own logic and appearance.
 
 - How do you mount a React app (root component) to the DOM?
-  By adding the keywords `export default` to the beginning of the main component definition line.
+  React uses the `createRoot()` function and the `render()` method to mount the app to the DOM
 
 - What are some other popular frontend frameworks?
   Svelte, SolidJS, Angular
