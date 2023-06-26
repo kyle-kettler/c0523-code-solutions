@@ -3,22 +3,22 @@ import './HotButton.css';
 
 export default function HotButton() {
   const [count, setCount] = useState<number>(0);
-  let [temperature, setTemperature] = useState<string>('cold');
+  const [temperature, setTemperature] = useState<string>('cold');
 
   const handleButton = () => {
     setCount(count + 1);
-    if (count < 4) {
-      setTemperature((temperature = 'cold'));
-    } else if (count < 7) {
-      setTemperature((temperature = 'cool'));
-    } else if (count < 10) {
-      setTemperature((temperature = 'tepid'));
-    } else if (count < 13) {
-      setTemperature((temperature = 'warm'));
-    } else if (count < 16) {
-      setTemperature((temperature = 'hot'));
+    if (count < 3) {
+      setTemperature('cold');
+    } else if (count < 6) {
+      setTemperature('cool');
+    } else if (count < 9) {
+      setTemperature('tepid');
+    } else if (count < 12) {
+      setTemperature('warm');
+    } else if (count < 15) {
+      setTemperature('hot');
     } else {
-      setTemperature((temperature = 'nuclear'));
+      setTemperature('nuclear');
     }
   };
 
@@ -27,6 +27,7 @@ export default function HotButton() {
       <button onClick={handleButton} className={`hot-button ${temperature}`}>
         Hot Button
       </button>
+      <p>{`Number of clicks: ${count}`}</p>
     </div>
   );
 }
