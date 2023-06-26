@@ -6,6 +6,8 @@ const $pagination = document.querySelector('.pagination');
 const $paginationDots = Array.from($pagination.children);
 
 function nextSlide() {
+  clearInterval(carouselTimer);
+  carouselTimer = setInterval(nextSlide, 3000);
   const $currentSlide = $carouselTrack.querySelector('.current');
   const $nextSlide = $currentSlide.nextElementSibling;
   const $currentDot = $pagination.querySelector('.active');
@@ -28,6 +30,8 @@ function nextSlide() {
 }
 
 function prevSlide() {
+  clearInterval(carouselTimer);
+  carouselTimer = setInterval(nextSlide, 3000);
   const $currentSlide = $carouselTrack.querySelector('.current');
   const $previousSlide = $currentSlide.previousElementSibling;
   const $currentDot = $pagination.querySelector('.active');
@@ -47,22 +51,11 @@ function prevSlide() {
     $currentDot.classList.remove('active');
     $prevDot.classList.add('active');
   }
-  //   if (counter === 0) {
-  //     counter = totalItemsIndex;
-  //     $paginationDots[totalItemsIndex].classList.add('active');
-  //     $imagesList[totalItemsIndex].classList.remove('hidden');
-  //     $paginationDots[0].classList.remove('active');
-  //     $imagesList[0].classList.add('hidden');
-  //   } else {
-  //     $paginationDots[counter].classList.remove('active');
-  //     $paginationDots[counter - 1].classList.add('active');
-  //     $imagesList[counter].classList.add('hidden');
-  //     $imagesList[counter - 1].classList.remove('hidden');
-  //     counter--;
-  //   }
 }
 
 function goToSlideAtIndex(event) {
+  clearInterval(carouselTimer);
+  carouselTimer = setInterval(nextSlide, 3000);
   const $targetDot = event.target.closest('button');
   if (!$targetDot) return;
 
@@ -100,4 +93,4 @@ $prevArrow.addEventListener('click', prevSlide);
 //   }
 // });
 
-// const carouselTimer = setInterval(nextSlide, 3000);
+let carouselTimer = setInterval(nextSlide, 3000);
