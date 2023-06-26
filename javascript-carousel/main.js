@@ -78,19 +78,4 @@ $nextArrow.addEventListener('click', nextSlide);
 
 $prevArrow.addEventListener('click', prevSlide);
 
-// $carousel.addEventListener('click', (event) => {
-//   console.log(event.target);
-//   if (event.target === $nextArrow) {
-//     nextSlide();
-//     clearInterval(carouselTimer);
-//     setInterval(nextSlide, 3000);
-//   } else if (event.target === $prevArrow) {
-//     prevSlide();
-//     clearInterval(carouselTimer);
-//     setInterval(nextSlide, 3000);
-//   } else if (event.target === $paginationDots) {
-//     console.log(event.target);
-//   }
-// });
-
 let carouselTimer = setInterval(nextSlide, 3000);
