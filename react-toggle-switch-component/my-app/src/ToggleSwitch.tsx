@@ -3,18 +3,11 @@ import './ToggleSwitch.css';
 
 export default function ToggleButton() {
   const [toggle, setToggle] = useState(false);
-  const [toggleText, setToggleText] = useState('OFF');
-  const [active, setActive] = useState('');
+  const toggleText = toggle ? 'ON' : 'OFF';
+  const active = toggle ? 'checked' : '';
 
   function handleToggle() {
-    setToggle(toggle ? false : true);
-    if (toggle === true) {
-      setToggleText('OFF');
-      setActive('');
-    } else {
-      setToggleText('ON');
-      setActive('checked');
-    }
+    setToggle(!toggle);
   }
 
   return (
