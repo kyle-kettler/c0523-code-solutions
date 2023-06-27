@@ -18,9 +18,7 @@ export default function ToggleButton({ text, color }: Props) {
   return (
     <button
       onClick={handleClick}
-      style={
-        isClicked ? { backgroundColor: 'white' } : { backgroundColor: color }
-      }>
+      style={{ backgroundColor: isClicked ? 'white' : color }}>
       <p>{text}</p>
     </button>
   );
