@@ -25,10 +25,6 @@
   height: 0;
 }
 
-.switch:checked {
-  background-color: ;
-}
-
 .slider {
   position: absolute;
   top: 0;

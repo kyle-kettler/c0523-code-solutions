@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import ToggleButton from './ToggleSwitch';
+import ToggleSwitch from './ToggleSwitch';
 
 function App() {
-  return <ToggleButton />;
+  return <ToggleSwitch />;
 }
 
 export default App;
