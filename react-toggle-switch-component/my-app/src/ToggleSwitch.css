@@ -1,0 +1,47 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.switch {
+  position: relative;
+  width: 3.25rem;
+  height: 1.5rem;
+  background-color: lightgrey;
+  border-radius: 10rem;
+  border: 2px solid black;
+}
+
+.switch.checked {
+  background-color: green;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch:checked {
+  background-color: ;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  outline: 2px solid black;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  left: auto;
+  right: 0;
+}
