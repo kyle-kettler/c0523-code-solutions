@@ -21,7 +21,7 @@ export default function ToggleButton({ text, color }: Props) {
       style={
         isClicked ? { backgroundColor: 'white' } : { backgroundColor: color }
       }>
-      {text}
+      <p>{text}</p>
     </button>
   );
 }

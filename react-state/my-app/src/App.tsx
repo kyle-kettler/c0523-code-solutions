@@ -7,7 +7,7 @@ function App() {
     <div>
       <ToggleButton text={'Hello'} color={'red'} />
       <ToggleButton text={'World'} color={'green'} />
-      <ToggleButton text={'React'} color={'cornflowerblue'} />
+      <ToggleButton text={'React'} color={'lightblue'} />
     </div>
   );
 }
