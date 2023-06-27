@@ -1,18 +1,12 @@
 import { FormEvent, useState } from 'react';
 
-export default function RegistrationFormUncontrolled() {
+export default function RegistrationFormControlled() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const entries = new Map([
-      ['username', username],
-      ['password', password],
-    ]);
-
-    const objFromEntries = Object.fromEntries(entries);
-    console.log('state', objFromEntries);
+    console.log('controlled state', { username, password });
     setPassword('');
     setUsername('');
   }
