@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Banner from './Banner';
 import Indicators from './Indicators';
 import NextButton from './NextButton';
@@ -8,6 +9,8 @@ type Props = {
 };
 
 export default function RotatingBanner({ items }: Props) {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
   return (
     <div
       style={{
@@ -16,11 +19,9 @@ export default function RotatingBanner({ items }: Props) {
         flexDirection: 'column',
         alignItems: 'center',
       }}>
-      <Banner />
+      <Banner item={items[currentIndex]} />
       <PrevButton />
-      <div>
-        <Indicators items={items} />
-      </div>
+      <Indicators currentIndex={currentIndex} count={items.length} />
       <NextButton />
     </div>
   );
