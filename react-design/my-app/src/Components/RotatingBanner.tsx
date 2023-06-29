@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Banner from './Banner';
 import Indicators from './Indicators';
 import NextButton from './NextButton';
@@ -11,6 +11,20 @@ type Props = {
 export default function RotatingBanner({ items }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
+  function handleNext() {
+    const nextIndex = (currentIndex + 1) % items.length;
+    setCurrentIndex(nextIndex);
+  }
+
+  function handlePrev() {
+    const prevIndex = (currentIndex - 1 + items.length) % items.length;
+    setCurrentIndex(prevIndex);
+  }
+
+  function handleIndicatorClick(index: number) {
+    setCurrentIndex(index);
+  }
+
   return (
     <div
       style={{
@@ -20,9 +34,13 @@ export default function RotatingBanner({ items }: Props) {
         alignItems: 'center',
       }}>
       <Banner item={items[currentIndex]} />
-      <PrevButton />
-      <Indicators currentIndex={currentIndex} count={items.length} />
-      <NextButton />
+      <PrevButton onPrev={handlePrev} />
+      <Indicators
+        onIndicatorClicked={handleIndicatorClick}
+        currentIndex={currentIndex}
+        count={items.length}
+      />
+      <NextButton onNext={handleNext} />
     </div>
   );
 }
