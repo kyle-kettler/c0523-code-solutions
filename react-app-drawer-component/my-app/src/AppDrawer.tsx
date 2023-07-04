@@ -7,22 +7,40 @@ export type MenuItem = {
 type AppDrawerProps = {
   menuItems: MenuItem[];
   heading: string;
+  drawerState: boolean;
+  onMenuItemClicked: Function;
+  onShadeClicked: Function;
 };
 
 type MenuItemProps = {
   menuTitle: MenuItem;
+  onMenuItemClicked: Function;
 };
 
-export default function AppDrawer({ heading, menuItems }: AppDrawerProps) {
+export default function AppDrawer({
+  heading,
+  menuItems,
+  onMenuItemClicked,
+  drawerState,
+  onShadeClicked,
+}: AppDrawerProps) {
+  const openClass = drawerState ? 'open' : '';
+
   return (
-    <div className="shade">
-      <div className="app-drawer">
+    <div className="app-drawer-wrap">
+      <div
+        className={`shade ${openClass}`}
+        onClick={() => onShadeClicked()}></div>
+      <div className={`app-drawer ${openClass}`}>
         <div className="heading-wrap">
           <h3>{heading}</h3>
         </div>
         <div className="menu-wrap">
           {menuItems.map((item, index) => (
-            <MenuLink menuTitle={item} />
+            <MenuLink
+              menuTitle={item}
+              onMenuItemClicked={() => onMenuItemClicked(item.title)}
+            />
           ))}
         </div>
       </div>
@@ -30,6 +48,12 @@ export default function AppDrawer({ heading, menuItems }: AppDrawerProps) {
   );
 }
 
-function MenuLink({ menuTitle }: MenuItemProps) {
-  return <div className="menu-link">{menuTitle.title}</div>;
+function MenuLink({ menuTitle, onMenuItemClicked }: MenuItemProps) {
+  return (
+    <div
+      className="menu-link"
+      onClick={() => onMenuItemClicked(menuTitle.title)}>
+      {menuTitle.title}
+    </div>
+  );
 }
