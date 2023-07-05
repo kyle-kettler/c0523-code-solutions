@@ -1,0 +1,500 @@
+   63  git branch react-intro
+   64  git switch react-intro
+   65  cd react-intro
+   66  npx create-react-app my-app
+   67  cd my-app
+   68  npm start
+   69  cd ..
+   70  cd ..
+   71  git status
+   72  git add .
+   73  git status
+   74  git commit -m "completed react-intro"
+   75  git push origin react-intro 
+   76  git status
+   77  git add .
+   78  git status
+   79  git commit -m "updated quiz questions"
+   80  git push origin react-intro 
+   81  git switch main
+   82  git branch react-jsx
+   83  git switch react-jsx
+   84  cd react-jsx
+   85  npx create-react-app my-app
+   86  cd my-app
+   87  npm start
+   88  cd ..
+   89  cd ..
+   90  git status
+   91  git add .
+   92  git status
+   93  git commit -m "completed react-jsx"
+   94  git push origin react-jsx 
+   95  git switch main
+   96  git branch react-components
+   97  git switch react-components
+   98  cd react-components
+   99  npm create-react-app my-app
+  100  npx create-react-app ny-app
+  101  cd my-app
+  102  nps start
+  103  npm start
+  104  cd ..
+  105  cd ..
+  106  git status
+  107  git add .
+  108  git commit -m "completed react-components"
+  109  git push origin react-components 
+  110  git switch main
+  111  git switch react-components 
+  112  git status
+  113  git switch main
+  114  git switch javascript carousel
+  115  git switch javascript-carousel
+  116  git switch main
+  117  git branch react-props-and-expressions
+  118  git switch react-props-and-expressions
+  119  cd react-props-and-expressions
+  120  cd react-props-and-expressions
+  121  npx create-react-app my-app --template-typescript
+  122  cd my=-app
+  123  cd my-app
+  124  npm start
+  125  cd ..
+  126  cd ..
+  127  git status
+  128  git add .
+  129  git status
+  130  git commit -m "completed react-props-and-expressions"
+  131  git push origin react-props-and-expressions 
+  132  cd react-props-and-expressions
+  133  cd my-app
+  134  npm start
+  135  cd ..
+  136  cd ..
+  137  git switch main
+  138  git branch react-events
+  139  git switch react-events
+  140  cd react-events
+  141  cd react-events
+  142  npx create-react-app my-app
+  143  cd my-app
+  144  npm start
+  145  cd ..
+  146  cd ..
+  147  git status
+  148  git add
+  149  git add .
+  150  git status
+  151  git commit -m "completed react-events"
+  152  git push origin react-events 
+  153  git switch main
+  154  git branch react-state
+  155  git switch react-state
+  156  cd react-state
+  157  npx create-react-app my-app --template typescript
+  158  cd my-app
+  159  npm start
+  160  cd ..
+  161  cd ..
+  162  git status
+  163  git add .
+  164  git status
+  165  git commit -m "completed react-state"
+  166  git push origin react-state 
+  167  git switch main
+  168  git switch javascript-carousel
+  169  git status
+  170  git add .
+  171  git commit -m "WIP carousel working, just need to figure out how to reset the timer properly when the next or prev arrow is clicked." 
+  172  git commit -m "WIP carousel working, just need to figure out how to reset the timer properly when the next or prev arrow is clicked." 
+  173  git commit -m "WIP carousel working, just need to figure out how to reset the timer properly when the next or prev arrow is clicked." 
+  174  git commit -m "WIP carousel working, just need to figure out how to reset the timer properly when the next or prev arrow is clicked." 
+  175  git add .
+  176  git commit -m "WIP carousel working, just need to figure out how to reset the timer properly when the next or prev arrow is clicked." 
+  177  git push origin javascript-carousel 
+  178  git status
+  179  git add .
+  180  git commit -m "completed javascript carousel"
+  181  git status
+  182  git add .
+  183  git commit -m "removed old commented code"
+  184  git push origin javascript-carousel 
+  185  git switch main
+  186  git branch react-refresher
+  187  git switch react-refresher
+  188  cd react-refresher
+  189  npx create-react-app my-app --template typescript 
+  190  cd my-app
+  191  npm start
+  192  cd ..
+  193  cd ..
+  194  git status
+  195  git add .
+  196  git status
+  197  git commit -m "completed react-refresher"
+  198   git push origin react-refresher 
+  199  git switch main
+  200  git pull origin main
+  201  git pull origin main
+  202  git pull origin main
+  203  git switch react-components
+  204  cd react-components
+  205  cd my-app
+  206  npm start
+  207  cd ..
+  208  cd ..
+  209  git status
+  210  git add .
+  211  git status
+  212  git commit -m "updated to remove unneeded jsx fragment"
+  213  git push origin react-components 
+  214  git switch main
+  215  git pull origin main
+  216  git switch react-hot-button-component
+  217  git branch react-hot-button-component
+  218  git switch react-hot-button-component
+  219  cd react-hot-button-component
+  220  npx create-react-app my-app --template typescript
+  221  cd my-app
+  222  npm start
+  223  cd ..
+  224  cd ..
+  225  git status
+  226  git add .
+  227  git status
+  228  git commit -m "completed react-hot-button-component"
+  229  git push origin react-hot-button-component 
+  230  git status
+  231  git add .
+  232  git commit -m "removed unused styles"
+  233  git push origin react-hot-button-component 
+  234  cd react-hot-button-component/my-app
+  235  npm start
+  236  cd ..
+  237  cd ..
+  238  git status
+  239  git add .
+  240  git commit -m "updated state variable to use const and added number of clicks text"
+  241  git push origin react-hot-button-component 
+  242  git switch main
+  243  git branch react-toggle-switch-component
+  244  git switch react-toggle-switch-component
+  245  cd react-toggle-switch-component
+  246  npx create-react-app my-app --template typescript
+  247  cd my-app
+  248  npm start
+  249  npm start
+  250  cd ..
+  251  cd ..
+  252  git status
+  253  git add .
+  254  git status
+  255  git commit -m "WIP toggle switch"
+  256  git push origin react-toggle-switch-component 
+  257  cd react-toggle-switch-component
+  258  cs my-app
+  259  cd my-app
+  260  npm start
+  261  cd ..
+  262  cd ..
+  263  git status
+  264  git add .
+  265  git status
+  266  git commit "completed react-toggle-switch-component"
+  267  git commit -m "completed react-toggle-switch-component"
+  268  git push origin react-toggle-switch-component 
+  269  git switch main
+  270  git pull origin main
+  271  git branch react-rendering-lists
+  272  git switch react-state
+  273  cs react-state/my-app
+  274  cd react-state/my-app
+  275  npm start
+  276  npm start
+  277  cd ..
+  278  cd ..
+  279  git status
+  280  git switch main
+  281  git pull origin main
+  282  git switch react-state
+  283  git status
+  284  git push origin react-state
+  285  cd react-state
+  286  npx create-react-app my-app --template typescript
+  287  cd ..
+  288  git status
+  289  git add .
+  290  git commit -m "reset files"
+  291  git push origin react-state 
+  292  git status
+  293  git add .
+  294  git status
+  295  cd my-app
+  296  cd react-state/my-app
+  297  npm start
+  298  cd ..
+  299  cd ..
+  300  git status
+  301  git commit -m "completed react-state"
+  302  git push origin react-state 
+  303  git status
+  304  git add .
+  305  git commit -m "completed react-state"
+  306  git status
+  307  git add .
+  308  git status
+  309  git commit -m "small tweaks to track files in pr"
+  310  git push origin react-state
+  311  cd react-state/my-app
+  312  npm start
+  313  cd ..
+  314  cd ..
+  315  git status
+  316  git add .
+  317  git commit -m "made recommend changes"
+  318  git push origin react-state 
+  319  git switch main
+  320  git pull origin main
+  321  git checkout react-state
+  322  git merge main
+  323  git status
+  324  git merge --abort
+  325  git status
+  326  git switch main
+  327  git switch react-rendering-lists
+  328  cd react-rendering-lists
+  329  npx create-react-app my-app --template typescript
+  330  cd my-app
+  331  npm start
+  332  cd ..
+  333  cd ..
+  334  git status
+  335  git add .
+  336  git staus
+  337  git status
+  338  git commit -m "completed react-rendering-lists"
+  339  git push origin react-rendering-lists 
+  340  git switch main
+  341  git branch react-form-controls
+  342  git switch react-form-controls
+  343  cd react-form-controls
+  344  npx create-react-app my-app --template typescript
+  345  CD MY-APP
+  346  cd my-app
+  347  npm start
+  348  cd ..
+  349  cd ..
+  350  git status
+  351  git add .
+  352  git status
+  353  git status
+  354  git add .
+  355  git status
+  356  git commit -m "completed react-form-components"
+  357  git push origin react-form-controls 
+  358  git switch main
+  359  git switch react-form-controls 
+  360  cd react-form-controls/
+  361  cd my-app
+  362  npm start
+  363  cd ..
+  364  cd ..
+  365  git status
+  366  git add .
+  367  git commit -m "fixed duplicate component name and simplified controlled console log"
+  368  git push origin react-form-controls 
+  369  git switch main
+  370  git switch react-toggle-switch-component 
+  371  cd react-toggle-switch-component/my-app
+  372  npm start
+  373  cd ..
+  374  cd ..
+  375  git status
+  376  git add
+  377  git add .
+  378  git status
+  379  git commit -m "reduced number of useState varaible and simplified conditionals to ternary"
+  380  git push origin react-toggle-switch-component 
+  381  git switch main
+  382  git pull origin main
+  383  git branch react-validated-input-component
+  384  git switch react-validated-input-component
+  385  cd react-validated-input-component
+  386  cd react-validated-input-component
+  387  npx create-react-app my-app --template-typescript
+  388  npx create-react-app my-app --template typescript
+  389  cd my-app
+  390  npm start
+  391  npm start
+  392  npm start
+  393  cd ..
+  394  cd ..
+  395  git status
+  396  git add .
+  397  git status
+  398  git commit -m "completed react-validated-input-component"
+  399  git push origin react-validated-input-component
+  400  git switch main
+  401  git branch react-design
+  402  git switch react-design
+  403  cd react-design
+  404  npx create-react-app my-app --template typescript
+  405  cd my-app
+  406  npm start
+  407  cd ..
+  408  cd ..
+  409  git status
+  410  git add .
+  411  git status
+  412  git commit -m "completed phase 1 of react-design"
+  413  git push origin react-design 
+  414  cd react-design/my-app/
+  415  npm start
+  416  cd react-design/my-app/
+  417  npm start
+  418  cd ..
+  419  cd ..
+  420  git status
+  421  git add
+  422  git add .
+  423  git status
+  424  git commit -m "completed phase 2 of react-design"
+  425  git push origin react-design 
+  426  cd react-design/my-app/
+  427  npm start
+  428  cd ..
+  429  cd ..
+  430  git status
+  431  git add .
+  432  git status
+  433  git commit -m "sompleted phase 3 of react-design"
+  434  git push origin react-design 
+  435  git switch main
+  436  git branch react-search-component
+  437  git switch react-search-component
+  438  cd react-search-component
+  439  npx create-react-app my-app -template typescript
+  440  npx create-react-app my-app --template typescript
+  441  cd my-app
+  442  npm start
+  443  cd ../..
+  444  git status
+  445  git add .
+  446  git status
+  447  git commit -m "completed react-search-component"
+  448  git push origin react-search-component 
+  449  git switch main
+  450  git pull origin main
+  451  git branch react-accordion-component
+  452  git switch react-accordion-component
+  453  cd react-accordion-component
+  454  npx create-react-app my-app --template typescript
+  455  cd my-app
+  456  npm start
+  457  npm start
+  458  cd ../..
+  459  git status
+  460  git add
+  461  git add a
+  462  git add .
+  463  git status
+  464  git commit -m "completed react-accordion-component"
+  465  git push origin react-accordion-component 
+  466  git switch main
+  467  git switch react-search-component
+  468  cd react-search-component/my-app
+  469  npm install react-icons
+  470  npm start
+  471  cd ../..
+  472  git add .
+  473  git status
+  474  git commit -m "updated search input so it has a magnifying glass icon"
+  475  git push origin react-search-component 
+  476  git switch main
+  477  git branch react-app-drawer-component
+  478  git switch react-app-drawer-component
+  479  cd react-app-drawer-component
+  480  npx create-react-app my-app --template typescript
+  481  npm start
+  482  cd my-app
+  483  npm install react-icons
+  484  npm start
+  485  cd ../..
+  486  git add .
+  487  git status
+  488  git commit -m "WIP static version of AppDrawer mostly built"
+  489  git push orign react-app-drawer-component 
+  490  git push origin react-app-drawer-component 
+  491  cd react-app-drawer-component
+  492  cd my-app
+  493  npm start
+  494  cd ../..
+  495  git add .
+  496  git status
+  497  git commit -m "completed react-app-drawer-component"
+  498  git push origin react-app-drawer-component 
+  499  git switch mian
+  500  git switch main
+  501  git branch command-line-basics
+  502  git switch command-line-basics
+  503  cd command-line-basics
+  504  man man
+  505  man caqt
+  506  man cat
+  507  cat laziness.txt
+  508  cat impatience.txt
+  509  cat hubris.txt
+  510  cat laziness.txt impatience.txt hubris.txt
+  511  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  512  cat three-virtues.txt
+  513  man ls
+  514  ls
+  515  ls -a
+  516  ls -F
+  517  ls lfz-staff/
+  518  ls lfz-staff/ -a
+  519  ls lfz-staff/ -F
+  520  ls -aF lfz-staff > lfz-staff/contents.txt
+  521  cat ;fx-staff/contetns.txt
+  522  cat lfz-staff/contents.txt
+  523  man pwd
+  524  pwd
+  525  pwd > i-was-here.txt
+  526  ls
+  527   cat i-was-here.txt
+  528  man echo
+  529  echo 'Hello, World!'
+  530  echo 'Hello, World!' > hello.txt
+  531  ls
+  532  cat hello.txt
+  533  man echo
+  534  man touch
+  535  man touch
+  536  touch tag-youre-it.txt
+  537  touch snoot/boop.txt
+  538  ls snoot/
+  539  man mkdir
+  540  mkdir parent
+  541  ls
+  542  man mkdir
+  543  mkdir -p parent/child/grandchild
+  544  touch parent/child/grandchild/.gitkeep
+  545  la -a parent/child/grandchild
+  546  ls -a parent/child/grandchild
+  547  man mv
+  548  mv pokiemans pokemon
+  549  ls
+  550  man rm
+  551  rm lol.txt
+  552  ls
+  553  man rm
+  554  rm -r kill-me/
+  555  ls
+  556  man cp
+  557  cp and-then.txt no-and-then.txt
+  558  ls
+  559  cat and-then.txt no-and-then.txt 
+  560  man history
+  561  history
+  562  history > command-history.txt
