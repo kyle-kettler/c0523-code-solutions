@@ -1,7 +1,7 @@
 import { FiSearch } from 'react-icons/fi';
 
 type Props = {
-  onSearchInput: Function;
+  onSearchInput: (value: string) => void;
 };
 
 export default function SearchInput({ onSearchInput }: Props) {
