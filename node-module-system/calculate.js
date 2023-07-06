@@ -19,5 +19,5 @@ const result =
     : undefined;
 
 result === undefined
-  ? console.log('invalid operation')
+  ? console.log('invalid operation:', calculation)
   : console.log('result:', result);
