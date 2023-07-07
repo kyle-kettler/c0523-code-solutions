@@ -1,4 +1,4 @@
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
 import './Accordion.css';
 
 export type Topic = {
@@ -6,25 +6,15 @@ export type Topic = {
   content: string;
 };
 
-type ParentProps = {
+type AccordionProps = {
   topics: Topic[];
 };
 
-type ChildProps = {
-  topic: Topic;
-  onToggle: MouseEventHandler;
-  currentItem: boolean;
-};
+export default function Accordion({ topics }: AccordionProps) {
+  const [openItem, setOpenItem] = useState<number>();
 
-export default function Accordion({ topics }: ParentProps) {
-  const [openItem, setOpenItem] = useState<null | number>(null);
-
-  function handleToggle(index: number) {
-    if (openItem === index) {
-      return setOpenItem(null);
-    } else {
-      setOpenItem(index);
-    }
+  function handleToggle(index: number): void {
+    setOpenItem(openItem === index ? undefined : index);
   }
 
   return (
@@ -34,20 +24,26 @@ export default function Accordion({ topics }: ParentProps) {
           key={index}
           onToggle={() => handleToggle(index)}
           topic={item}
-          currentItem={openItem === index}
+          isOpen={openItem === index}
         />
       ))}
     </div>
   );
 }
 
-function AccordionItem({ topic, onToggle, currentItem }: ChildProps) {
+type ItemProps = {
+  topic: Topic;
+  onToggle: () => void;
+  isOpen: boolean;
+};
+
+function AccordionItem({ topic, onToggle, isOpen }: ItemProps) {
   return (
     <div className="item-wrap">
       <div className="headline-wrap" onClick={onToggle}>
         <h3>{topic.title}</h3>
       </div>
-      <div className={`content-block ${currentItem ? 'open' : ''}`}>
+      <div className={`content-block ${isOpen ? 'open' : ''}`}>
         <div className="content-wrap">
           <p>{topic.content}</p>
         </div>
