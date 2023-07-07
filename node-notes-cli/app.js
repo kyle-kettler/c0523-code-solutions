@@ -3,19 +3,19 @@ import { readFile, writeFile } from 'node:fs/promises';
 const data = await JSON.parse(await readFile('data.json'));
 const [, , operation, ...args] = process.argv;
 
-function runApp(operation, args) {
+async function runApp(operation, args) {
   switch (operation) {
     case 'read':
-      readNotes(data);
+      await readNotes(data);
       break;
     case 'create':
-      createNote(data, args);
+      await createNote(data, args);
       break;
     case 'update':
-      updateNote(data, args);
+      await updateNote(data, args);
       break;
     case 'delete':
-      deleteNote(data, args);
+      await deleteNote(data, args);
       break;
   }
 }
@@ -52,7 +52,7 @@ async function deleteNote(data, args) {
 }
 
 try {
-  runApp(operation, args);
+  await runApp(operation, args);
 } catch (err) {
   console.log('there was an error', err);
 }
