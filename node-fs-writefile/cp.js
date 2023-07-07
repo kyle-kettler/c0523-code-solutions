@@ -4,12 +4,11 @@ const fileToCopy = process.argv[2];
 const newFile = process.argv[3];
 
 async function read(file) {
-  const contents = await readFile(file, 'utf8');
-  return contents;
+  return await readFile(file);
 }
 
 async function copy(fileName, fileContent) {
-  await writeFile(fileName, fileContent, 'utf-8');
+  await writeFile(fileName, fileContent);
 }
 
 try {
