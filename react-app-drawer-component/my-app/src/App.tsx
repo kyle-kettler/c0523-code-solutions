@@ -22,23 +22,23 @@ const items: MenuItem[] = [
 
 function App() {
   const [activeItem, setActiveItem] = useState('Home');
-  const [drawerState, setDrawerState] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   function handleMenuItemClick(title: string) {
     setActiveItem(title);
-    setDrawerState(drawerState ? false : true);
+    setDrawerOpen(!drawerOpen);
   }
 
   function handleDrawerOpen() {
-    setDrawerState(drawerState ? false : true);
-    console.log(drawerState);
+    setDrawerOpen(drawerOpen ? false : true);
+    console.log(drawerOpen);
   }
 
   return (
     <div className="container">
       <DrawerButton onDrawerOpen={handleDrawerOpen} />
       <AppDrawer
-        drawerState={drawerState}
+        drawerState={drawerOpen}
         heading="Menu"
         menuItems={items}
         onMenuItemClicked={handleMenuItemClick}

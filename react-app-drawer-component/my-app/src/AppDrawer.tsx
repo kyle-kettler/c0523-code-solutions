@@ -8,13 +8,13 @@ type AppDrawerProps = {
   menuItems: MenuItem[];
   heading: string;
   drawerState: boolean;
-  onMenuItemClicked: Function;
-  onShadeClicked: Function;
+  onMenuItemClicked: (item: string) => void;
+  onShadeClicked: () => void;
 };
 
 type MenuItemProps = {
   menuTitle: MenuItem;
-  onMenuItemClicked: Function;
+  onMenuItemClicked: (item: string) => void;
 };
 
 export default function AppDrawer({
