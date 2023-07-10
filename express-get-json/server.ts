@@ -1,8 +1,7 @@
 import express from 'express';
 
-type Grades = {
-  [key: number]: { id: number; name: string; course: string; score: number };
-};
+type Grade = { id: number; name: string; course: string; score: number };
+type Grades = Record<number, Grade>;
 
 const grades: Grades = {
   12: {
