@@ -1,5 +1,5 @@
 {
-  "name": "express-hello-world",
+  "name": "express-get-json",
   "version": "1.0.0",
   "type": "module",
   "main": "server.js",
