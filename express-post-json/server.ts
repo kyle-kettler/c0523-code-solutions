@@ -9,19 +9,23 @@ const grades: Grades = {};
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/api/grades', (req, res) => {
-  const gradeArr = [];
+  const gradeArr: Grade[] = [];
   for (const key in grades) {
     gradeArr.push(grades[key]);
   }
   res.json(gradeArr);
 });
 
-app.use(express.json());
-
 app.post('/api/grades', (req, res) => {
+  const newGrade: Grade = req.body;
+  if (!newGrade.name || !newGrade.course || !newGrade.score) {
+    res.status(400).send('Incomplete request');
+    return;
+  }
   req.body.id = id;
-  const newGrade = req.body;
   grades[id] = newGrade;
   id++;
   res.sendStatus(201);
