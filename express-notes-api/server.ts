@@ -21,6 +21,7 @@ app.get('/api/notes', async (req, res) => {
     res.json(notesArr);
   } catch (err) {
     console.log('There was an error:', err);
+    res.status(500).json({ error: 'An unexpected error occured.' });
   }
 });
 
@@ -36,12 +37,13 @@ app.get('/api/notes/:id', async (req, res) => {
       return;
     }
     if (!notes[id]) {
-      res.status(404).json({ error: 'No note with id ' + id + ' found' });
+      res.status(404).json({ error: `No note with id ${id} found` });
       return;
     }
     res.json(notes[id]);
   } catch (err) {
     console.log('There was an error:', err);
+    res.status(500).json({ error: 'An unexpected error occured.' });
   }
 });
 
@@ -80,7 +82,7 @@ app.delete('/api/notes/:id', async (req, res) => {
       return;
     }
     if (!notes[id]) {
-      res.status(404).json({ error: 'No note with id ' + id + ' found' });
+      res.status(404).json({ error: `No note with id ${id} found` });
       return;
     }
     delete notes[id];
@@ -110,7 +112,7 @@ app.put('/api/notes/:id', async (req, res) => {
       return;
     }
     if (!notes[id]) {
-      res.status(404).json({ error: 'No note with id ' + id + ' found' });
+      res.status(404).json({ error: `No note with id ${id} found` });
       return;
     }
     for (const key in data.notes) {
