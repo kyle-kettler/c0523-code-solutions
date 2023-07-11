@@ -35,11 +35,23 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.delete('/api/grades/:id', (req, res) => {
-  for (const key in grades) {
-    if (Number(req.params.id) === grades[key].id) {
-      delete grades[key];
-      res.sendStatus(204);
+  const id = Number(req.params.id);
+  try {
+    for (const key in grades) {
+      if (id === grades[key].id) {
+        delete grades[key];
+        res.sendStatus(204);
+        break;
+      }
+      if (id !== grades[key].id) {
+        res.sendStatus(404);
+        throw new Error(
+          `Entrty with id of ${id} not found, please enter a different id.`
+        );
+      }
     }
+  } catch (err) {
+    console.log(err);
   }
 });
 
