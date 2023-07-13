@@ -13,15 +13,17 @@ export default function List() {
   //    - Handle errors from `readItems`
 
   useEffect(() => {
-    readItems()
-      .then((value) => {
+    async function getItems() {
+      try {
+        const values = await readItems();
+        setItems(values);
+      } catch (error) {
+        setError(error);
+      } finally {
         setIsLoading(false);
-        setItems(value);
-      })
-      .catch((err) => {
-        setIsLoading(false);
-        setError(true);
-      });
+      }
+    }
+    getItems();
   }, []);
 
   if (isLoading) {

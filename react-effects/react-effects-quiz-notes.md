@@ -14,7 +14,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   Effects are typically used to “step out” of your React code and synchronize with some external system. If you aren't synchronizing with an external system you might not need an effect.
 
 - When do Effects run?
-  When state is updated
+  On every rerender by default, but you can control it with the dependecies array. When those dependencies change, the Effect runs.
 
 - What function is used to declare an Effect?
   useEffect
