@@ -1,0 +1,80 @@
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.slider-wrap {
+  border: 0.25rem solid black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slider-img {
+  width: 50%;
+}
+
+.button-prev {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.button-next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  bottom: 0;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 0.75rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 100%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: black;
+}
