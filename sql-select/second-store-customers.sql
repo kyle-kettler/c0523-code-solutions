@@ -3,4 +3,4 @@ SELECT
 FROM
   "customers"
 WHERE
-  "storeId" = '2'
+  "storeId" = 2

@@ -3,4 +3,4 @@ SELECT
 FROM
   "customers"
 WHERE
-  "isActive" = 'false'
+  "isActive" = false

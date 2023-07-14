@@ -4,5 +4,5 @@ SELECT
 FROM
   "films"
 WHERE
-  "rentalRate" < '1.00'
+  "rentalRate" < 1
 LIMIT 50

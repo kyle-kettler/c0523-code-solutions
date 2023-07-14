@@ -3,4 +3,4 @@ SELECT
 FROM
   "actors"
 WHERE
-  "actorId" = '40'
+  "actorId" = 40
