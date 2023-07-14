@@ -1,2 +1,2 @@
-select count("inventoryId") as "totalDvds"
+select count(*) as "totalDvds"
   from "inventory";
