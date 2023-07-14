@@ -6,4 +6,4 @@ select "genres"."name" as "genre",
   join "filmGenre" using ("filmId")
   join "genres" using ("genreId")
   where "firstName" = 'Lisa' and "lastName" = 'Monroe'
-  group by "genre"
+  group by "genre";

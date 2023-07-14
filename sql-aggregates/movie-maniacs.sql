@@ -5,4 +5,4 @@ select "customerId",
   from "customers" as "c"
   join "payments" using ("customerId")
   group by "customerId"
-  order by "amountSpent" desc
+  order by "amountSpent" desc;
