@@ -37,44 +37,12 @@ export default function Todos() {
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo): Promise<void> {
-    try {
-      const res = await fetch('./api/todos', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newTodo)
-      });
-      const todo = await res.json();
-      setTodos((prev) => prev.concat(todo))
-    } catch(err) {
-      setError(err)
-    }
+
   }
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todoId: number): Promise<void> {
-    let todoStatus = { isCompleted: false };
-    for (let i = 0; i < todos.length; i++) {
-      if (todoId === todos[i].todoId) {
-        todoStatus.isCompleted = !todos[i].isCompleted
-      }
-    }
-    const res = await fetch(`./api/todos/${todoId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(todoStatus)
-    });
-    const updatedTodo = await res.json();
-    const updatedTodos = todos.map((item => {
-      if (item.todoId === updatedTodo.todoId) {
-        return updatedTodo;
-      }
-      return item;
-    }));
-    setTodos(updatedTodos);
+
   }
 
 
