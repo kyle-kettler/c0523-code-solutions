@@ -17,6 +17,7 @@ export default function Todos() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
+  const [isFormLoading, setIsFormLoading] = useState(false);
 
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Todos() {
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo): Promise<void> {
     try {
+      setIsFormLoading(true)
       const res = await fetch('./api/todos', {
         method: "POST",
         headers: {
@@ -49,6 +51,8 @@ export default function Todos() {
       setTodos((prev) => prev.concat(todo))
     } catch(err) {
       setError(err)
+    } finally {
+      setIsFormLoading(false);
     }
   }
 
@@ -89,7 +93,7 @@ export default function Todos() {
       <div className="row">
         <div className="col pt-5">
           <PageTitle text="Todo App" />
-          <TodoForm onSubmit={addTodo} />
+          <TodoForm onSubmit={addTodo} loading={isFormLoading}/>
           <TodoList todos={todos} toggleCompleted={toggleCompleted} />
         </div>
       </div>
