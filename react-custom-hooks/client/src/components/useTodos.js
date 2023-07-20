@@ -37,7 +37,7 @@ export function useTodos() {
   async function toggleCompleted(todoId) {
     try {
       let todo = todos.find((t) => t.todoId === todoId);
-      todo.isCompleted = todo.isCompleted ? false : true;
+      todo.isCompleted = !todo.isCompleted;
       const updated = await updateTodo(todo);
       const updatedTodos = todos.map((it) =>
         it.todoId === updated.todoId ? updated : it
