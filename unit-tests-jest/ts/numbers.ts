@@ -9,12 +9,8 @@ export function evenNumbers(numbers: number[]): number[] {
  * Returns a number formatted in dollars and cents.
  */
 export function toDollars(amount: number): string {
-  if (Number.isInteger(amount)) {
-    return `$${amount}.00`;
-  } else {
-    const fixed = amount.toFixed(2);
-    return `$${fixed}`;
-  }
+  const fixed = amount.toFixed(2);
+  return `$${fixed}`;
 }
 
 /**
@@ -24,7 +20,7 @@ export function toDollars(amount: number): string {
 export function divideBy(numbers: number[], divisor: number): number[] {
   const divided = [];
   for (let i = 0; i < numbers.length; i++) {
-    numbers[i] = divided.push(numbers[i] / divisor);
+    divided.push(numbers[i] / divisor);
   }
   return divided;
 }
@@ -37,13 +33,12 @@ export function multiplyBy(
   obj: Record<string, unknown>,
   multiplier: number
 ): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
   Object.entries(obj).forEach(([key, value]) => {
     if (typeof value !== 'number') {
-      result[key] = value;
+      obj[key] = value;
     } else {
-      result[key] = Number(value) * multiplier;
+      obj[key] = Number(value) * multiplier;
     }
   });
-  return result;
+  return obj;
 }

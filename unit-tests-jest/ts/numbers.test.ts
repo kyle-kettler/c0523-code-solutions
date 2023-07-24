@@ -38,6 +38,11 @@ describe('divideBy', () => {
     const result = evenNumbers(numbers);
     expect(result).toEqual([]);
   });
+  it('does not modify orignal array', () => {
+    const numbers = [4, 10, 20];
+    evenNumbers(numbers);
+    expect(numbers).toEqual([4, 10, 20]);
+  });
 });
 
 describe('multiplyBy', () => {
@@ -52,5 +57,11 @@ describe('multiplyBy', () => {
     const multiplier = 3;
     const result = multiplyBy(obj, multiplier);
     expect(result).toEqual({ test: 'test' });
+  });
+  it('modifies the original object', () => {
+    const obj = { test: 4 };
+    const multiplier = 3;
+    multiplyBy(obj, multiplier);
+    expect(obj).toEqual({ test: 12 });
   });
 });
