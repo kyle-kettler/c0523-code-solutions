@@ -1,10 +1,12 @@
 import { FormEvent, useState } from 'react';
 import { UnsavedTodo } from './Todos';
+import BeatLoader from 'react-spinners/BeatLoader'
 
 type Props = {
   onSubmit: (todo: UnsavedTodo) => void;
+  loading: boolean
 };
-export default function TodoForm({ onSubmit }: Props) {
+export default function TodoForm({ onSubmit, loading }: Props) {
   // Note: Use a controlled form so we can easily reset it after submit.
   const [task, setTask] = useState('');
 
@@ -18,6 +20,8 @@ export default function TodoForm({ onSubmit }: Props) {
     setTask('');
   }
 
+  const buttonLoader = loading ? <BeatLoader size={10} color={'#fff'}/> : 'Add Todo'
+
   return (
     <form className="input-group mb-4 shadow-sm" onSubmit={handleSubmit}>
       <input
@@ -30,8 +34,8 @@ export default function TodoForm({ onSubmit }: Props) {
         placeholder="What to do?"
       />
       <div className="input-group-append">
-        <button type="submit" className="btn btn-primary">
-          Add Todo
+        <button style={{width: "100px"}} type="submit" className="btn btn-primary" disabled={loading}>
+          {buttonLoader}
         </button>
       </div>
     </form>
